@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auscultation Trainer</title>
+<meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111418" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="assets/desx-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#f7f7f5; --surface:#fff; --ink:#16191d; --mute:#5f6670; --line:#e3e4e1;
+    --body:#e4e2dc; --heart:#cf3350; --lung:#2a6fd0; --on:#16191d; --chev:#8a9099;
+    --ease:cubic-bezier(.2,0,0,1);
+    --accent:#E26314;   /* DesX orange */
+    --byu:#002e5d;      /* BYU navy */
+    --on-accent:#16191d; /* dark ink on orange: 5.3:1 (white would be 3.6:1) */
+    /* design.byu.edu uses Proxima Nova (Adobe Fonts, licensed); Figtree is the free lookalike fallback */
+    --font:"proxima-nova","Proxima Nova",Figtree,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#111418; --surface:#181c22; --body:#262d36; --ink:#e9ecf0; --mute:#9aa2ad; --line:#2a313a; --on:#fff; --chev:#7d8691; --byu:#fff; }
+  }
+  * { box-sizing:border-box; }
+  html { -webkit-text-size-adjust:100%; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.45 var(--font);
+         -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+  ::selection { background:color-mix(in oklab, var(--accent) 30%, transparent); }
+  main { max-width:480px; margin:0 auto; padding:20px 16px 28px; display:grid; gap:16px; }
+
+  .site-header { border-bottom:1px solid var(--line); }
+  header { max-width:480px; margin:0 auto; padding:14px 16px; display:flex; align-items:center; gap:14px; }
+  .brand { display:block; line-height:0; flex:none; border-radius:3px; }
+  .byu { display:block; width:92px; height:26px; background:var(--byu);
+         -webkit-mask:url(assets/byu-white.png) no-repeat left center / contain; mask:url(assets/byu-white.png) no-repeat left center / contain; }
+  .desx { display:block; height:40px; width:auto; }
+  .rule { width:1px; height:32px; background:var(--line); flex:none; }
+  h1 { margin:0 0 0 auto; font-size:15px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; line-height:1.25; color:var(--ink); text-align:right; text-wrap:balance; }
+  @media (max-width:389px) { h1 { font-size:14px; letter-spacing:.08em; } }
+
+  .sex { position:absolute; top:0; right:0; z-index:2; display:flex; gap:2px; padding:3px; border-radius:12px; border:1px solid var(--line); background:var(--surface); }
+  .sex button { width:40px; height:36px; padding:0; border:0; border-radius:9px; background:transparent; color:var(--mute);
+                display:grid; place-items:center; }
+  .sex button:hover { color:var(--ink); }
+  .sex button[aria-pressed="true"] { color:#16191d; }
+  .sex #sexM[aria-pressed="true"] { background:#8ec9f5; }
+  .sex #sexF[aria-pressed="true"] { background:#f5a6c8; }
+  .sex svg, .gicon { width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+  .gicon { width:16px; height:16px; vertical-align:-3px; margin-right:6px; color:var(--mute); }
+  .controls { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  label { display:grid; gap:6px; font-size:13px; color:var(--mute); }
+  select { font:inherit; font-size:15px; color:var(--ink); height:44px; padding:0 36px 0 12px; border-radius:10px;
+           border:1px solid var(--line); background:var(--surface) no-repeat right 12px center / 12px
+           url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 4.5 6 8l3.5-3.5' fill='none' stroke='%238a9099' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+           appearance:none; -webkit-appearance:none; width:100%; min-width:0; text-overflow:ellipsis;
+           transition:border-color .15s var(--ease); }
+  select:hover { border-color:var(--chev); }
+  .chk { grid-column:1 / -1; display:flex; align-items:center; gap:10px; min-height:44px; margin-top:-8px; color:var(--ink); font-size:14px; cursor:pointer; }
+  .chk input { width:18px; height:18px; margin:0; accent-color:var(--accent); cursor:pointer; }
+
+  :focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+
+  .map > svg { width:100%; height:auto; max-height:min(81vh,684px); display:block; margin:0 auto; }
+  .torso { fill:var(--body); }
+  .sternum { stroke:var(--bg); stroke-width:1; stroke-dasharray:2 4; stroke-linecap:round; }
+  .side { font:600 8px var(--font); fill:var(--mute); }
+  .site { cursor:pointer; outline:none; -webkit-tap-highlight-color:transparent; }
+  .site .hit { fill:transparent; }
+  .site.none .dot { opacity:.28; }
+  .site.none text { opacity:.7; }
+  .site .dot { transition:transform .15s var(--ease); transform-box:fill-box; transform-origin:center; }
+  .site.heart .dot { fill:var(--heart); } .site.lung .dot { fill:var(--lung); }
+  .site .ring { fill:none; stroke-width:1.5; opacity:0; transform-box:fill-box; transform-origin:center; }
+  .site.heart .ring { stroke:var(--heart); } .site.lung .ring { stroke:var(--lung); }
+  .site text { font:600 4.3px var(--font); fill:#fff; text-anchor:middle; pointer-events:none; letter-spacing:0; }
+  @media (hover:hover) { .site:hover .dot { transform:scale(1.08); } }
+  .site:active .dot { transform:scale(.96); }
+  .site:focus-visible .dot { stroke:var(--on); stroke-width:2; }
+  .map { position:relative; }
+  #tip { position:absolute; left:0; top:0; z-index:5; pointer-events:none; padding:6px 10px; border-radius:8px;
+         background:var(--surface); color:var(--ink); border:1px solid var(--line); box-shadow:0 4px 14px rgb(0 0 0 / .14);
+         font-size:13px; font-weight:500; line-height:1.3; white-space:nowrap; opacity:0; transform:translateX(var(--nudge,0));
+         transition:opacity .12s var(--ease), transform .12s var(--ease); }
+  #tip.show { opacity:1; transform:none; }
+  #tip::before { content:""; position:absolute; top:50%; width:8px; height:8px; background:var(--surface);
+                 transform:translateY(-50%) rotate(45deg); }
+  #tip.to-right::before { left:-5px; border:1px solid var(--line); border-width:0 0 1px 1px; }
+  #tip.to-left::before { right:-5px; border:1px solid var(--line); border-width:1px 1px 0 0; }
+  @media (prefers-reduced-motion: reduce) { #tip { transition:none; } }
+  .site.active .ring { animation:ring 1.8s var(--ease) infinite; }
+  @keyframes ring { 0% { opacity:.55; transform:scale(1); } 100% { opacity:0; transform:scale(1.7); } }
+  @media (prefers-reduced-motion: reduce) {
+    .site.active .ring { animation:none; opacity:.5; transform:scale(1.3); }
+    .site .dot, button { transition:none; }
+  }
+
+  .legend { display:flex; justify-content:center; gap:16px; font-size:13px; color:var(--mute); margin-top:8px; }
+  .legend i { display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:6px; }
+
+  #now { border:1px solid var(--line); background:var(--surface); border-radius:14px; padding:12px 16px;
+         display:flex; align-items:center; gap:12px; min-height:78px; box-sizing:border-box; }
+  .readout { flex:1; min-width:0; display:grid; gap:2px; }
+  #site { font-size:13px; color:var(--mute); }
+  #now.idle { text-align:center; padding:16px; }
+  #now.idle #site { font-size:20px; font-weight:600; color:var(--ink); letter-spacing:-.01em; }
+  #label { font-size:20px; font-weight:600; letter-spacing:-.01em; text-wrap:balance; }
+  #label.hidden { color:var(--mute); font-weight:400; }
+  #label:empty, .note:empty { display:none; }
+  .note { color:var(--mute); font-size:13px; text-wrap:pretty; }
+  .actions { display:flex; gap:8px; flex:none; }
+  .actions:not(:has(button:not([hidden]))) { display:none; }
+
+  button { font:inherit; font-size:15px; font-weight:500; height:44px; padding:0 18px; border-radius:10px; border:1px solid var(--line);
+           background:var(--surface); color:var(--ink); cursor:pointer;
+           transition:transform .15s var(--ease), background-color .15s var(--ease), border-color .15s var(--ease); }
+  button:hover { border-color:var(--chev); }
+  button:active { transform:scale(.96); }
+  button[hidden] { display:none; }
+  #reveal { background:var(--accent); border-color:var(--accent); color:var(--on-accent); font-weight:600; }
+  #reveal:hover { border-color:var(--accent); filter:brightness(1.06); }
+
+  #unlock { display:none; position:fixed; inset:0; background:rgb(0 0 0 / .55); z-index:9; align-items:center; justify-content:center; }
+  #unlock.show { display:flex; }
+  #unlock button { height:auto; font-size:18px; padding:16px 28px; border-radius:14px; }
+</style>
+</head>
+<body>
+<div class="site-header">
+  <header>
+    <a class="brand" href="https://www.byu.edu" target="_blank" rel="noopener" aria-label="Brigham Young University"><span class="byu"></span></a>
+    <span class="rule" aria-hidden="true"></span>
+    <a class="brand" href="https://design.byu.edu" target="_blank" rel="noopener" aria-label="Design Exploration Research Group (DesX)"><img class="desx" src="assets/desx-x.png" alt="" width="40" height="40"></a>
+    <h1>Auscultation Trainer</h1>
+  </header>
+</div>
+<main>
+  <div class="map">
+    <div class="sex" role="group" aria-label="Patient sex (tap the selected one again to clear)">
+      <button type="button" id="sexM" data-sex="M" aria-pressed="false" aria-label="Male patient" title="Male">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="14" r="6"/><path d="M14.5 9.5 21 3M15 3h6v6"/></svg>
+      </button>
+      <button type="button" id="sexF" data-sex="F" aria-pressed="false" aria-label="Female patient" title="Female">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M12 15v7M9 19h6"/></svg>
+      </button>
+    </div>
+    <svg viewBox="35.7 16 185.6 257" role="group" aria-label="Chest sites">
+      <path class="torso" d="M128.506,22L128.506,266.916C106.755,266.924 85.081,263.917 84.173,257.485C82.345,244.545 82.193,244.182 82.388,230.697C82.626,214.216 85.012,198.209 85.393,185.497C85.693,174.897 84.764,166 82.764,157.6C81.864,164.7 71.648,162.87 64.448,162.87C56.048,162.87 53.126,162.3 53.126,153.1L53.126,141.2C53.126,127.8 57.477,116.251 69.377,112.251L89.416,106.251C99.016,102.951 112.076,97.448 112.076,95.915C112.076,89.115 110.4,82.5 109.3,72.9C105.2,74.1 102.8,69.6 102.2,63.4C101.6,58.2 102.5,55.8 105,56.9L105,49.4C105,33.7 114.4,22 128.5,22C128.502,22 128.504,22 128.506,22Z"/>
+      <path class="torso" transform="matrix(-1,0,0,1,257,0)" d="M128.506,22L128.506,266.916C106.755,266.924 85.081,263.917 84.173,257.485C82.345,244.545 82.193,244.182 82.388,230.697C82.626,214.216 85.012,198.209 85.393,185.497C85.693,174.897 84.764,166 82.764,157.6C81.864,164.7 71.648,162.87 64.448,162.87C56.048,162.87 53.126,162.3 53.126,153.1L53.126,141.2C53.126,127.8 57.477,116.251 69.377,112.251L89.416,106.251C99.016,102.951 112.076,97.448 112.076,95.915C112.076,89.115 110.4,82.5 109.3,72.9C105.2,74.1 102.8,69.6 102.2,63.4C101.6,58.2 102.5,55.8 105,56.9L105,49.4C105,33.7 114.4,22 128.5,22C128.502,22 128.504,22 128.506,22Z"/>
+      <line class="sternum" x1="128.5" y1="100" x2="128.5" y2="260"/>
+      <text class="side" x="71" y="252">R</text><text class="side" x="186" y="252" text-anchor="end">L</text>
+      <g id="sites"></g>
+    </svg>
+    <div id="tip" role="tooltip" aria-hidden="true"></div>
+    <div class="legend"><span><i style="background:var(--heart)"></i>Heart</span><span><i style="background:var(--lung)"></i>Lung</span></div>
+  </div>
+
+  <div id="now" class="idle" aria-live="polite">
+    <div class="readout">
+      <div id="site">Tap a site to listen</div>
+      <div id="label"></div>
+      <div class="note" id="note"></div>
+    </div>
+    <div class="actions">
+      <button id="reveal" hidden>Reveal</button>
+      <button id="stop" hidden>Stop</button>
+    </div>
+  </div>
+
+  <div class="controls">
+    <label>Heart case
+      <select id="heartCase"></select>
+    </label>
+    <label>Lung case
+      <select id="lungCase"></select>
+    </label>
+    <label class="chk"><input type="checkbox" id="quiz"> Quiz mode (hide the answer)</label>
+  </div>
+</main>
+
+<div id="unlock"><button id="unlockBtn">Tap to play</button></div>
+
+<script>
+// Layout of the 12 sites on the diagram (x, y in the SVG viewBox). Midline x = 128.5, sternal notch y ~ 100,
+// xiphisternal junction y ~ 151 (patient's right is the viewer's left).
+// Positions follow the HLS-CMDS textbook mannequin figure (A: lung, B: heart), rescaled to this torso:
+// Heart: RC/LC = top row near the base of the neck, either side of the midline; RUSB/LUSB = 2nd ICS at the
+//        sternal borders; LLSB = lower left sternal border; A = apex, 5th ICS near the midclavicular line.
+// Lung (anterior): textbook has upper pair directly under the base-of-neck row (x ~ +/-0.24 of half-width, same as
+//        RC/LC), mid pair ~0.45 and lower pair ~0.52 out. Lower pair sits a little below the textbook height so it
+//        doesn't collide with the apex marker when both sets share one diagram.
+const POS = { RC:[110.5,118], LC:[146.5,118], RUSB:[110.5,146], LUSB:[146.5,146], LLSB:[154,166], A:[163,181],
+              RUA:[105.5,133], LUA:[151.5,133], RMA:[94.5,153], LMA:[162.5,153], RLA:[96.5,196], LLA:[160.5,196] };
+const R = 5.9;   // marker radius
+const KIND = s => (['RUA','LUA','RMA','LMA','RLA','LLA'].includes(s) ? 'lung' : 'heart');
+
+const $ = id => document.getElementById(id);
+const audio = new Audio(); audio.loop = true;
+let data, current = null, patient = null, sex = '';   // patient: gender locked across taps so one case = one person
+
+fetch('sounds.json').then(r => r.json()).then(d => { data = d; init(); });
+
+function init() {
+  fill($('heartCase'), 'heart'); fill($('lungCase'), 'lung');
+  for (const [id, [x,y]] of Object.entries(POS)) {
+    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    g.setAttribute('class', 'site ' + KIND(id)); g.dataset.site = id;
+    g.setAttribute('tabindex', 0); g.setAttribute('role', 'button');
+    g.setAttribute('aria-label', data.sites[id]);
+    g.innerHTML = `<circle class="ring" cx="${x}" cy="${y}" r="${R}"/><circle class="dot" cx="${x}" cy="${y}" r="${R}"/>` +
+                  `<circle class="hit" cx="${x}" cy="${y}" r="${R+3}"/><text x="${x}" y="${y+1.7}">${id}</text>`;
+    g.addEventListener('click', () => tap(id));
+    g.addEventListener('mouseenter', () => showTip(g, id)); g.addEventListener('mouseleave', hideTip);
+    g.addEventListener('focus', () => { if (g.matches(':focus-visible')) showTip(g, id); }); g.addEventListener('blur', hideTip);
+    g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tap(id); } });
+    $('sites').appendChild(g);
+  }
+  $('heartCase').onchange = $('lungCase').onchange = () => { rollPatient(); markCoverage(); };
+  document.querySelectorAll('.sex button').forEach(b => b.onclick = () => {
+    sex = sex === b.dataset.sex ? '' : b.dataset.sex;     // tap the active one again to clear
+    document.querySelectorAll('.sex button').forEach(x => x.setAttribute('aria-pressed', x.dataset.sex === sex));
+    stop(); rollPatient(); markCoverage();
+  });
+  rollPatient(); markCoverage();
+  $('stop').onclick = stop;
+  $('reveal').onclick = () => { current.revealed = true; render(); };
+  $('quiz').onchange = () => { if (current) { current.revealed = false; render(); } };
+  $('unlockBtn').onclick = () => { $('unlock').classList.remove('show'); route(); };
+  addEventListener('hashchange', route);
+  route();
+}
+
+function showTip(g, id) {
+  // Sits to the outside of the dot (away from the midline) so it never covers a neighbouring site.
+  const tip = $('tip'), m = tip.parentElement.getBoundingClientRect(), d = g.querySelector('.dot').getBoundingClientRect();
+  tip.textContent = data.sites[id];
+  const w = tip.offsetWidth, h = tip.offsetHeight, cy = d.top + d.height/2 - m.top, gap = 10;
+  const xr = d.right - m.left + gap, xl = d.left - m.left - gap - w, vw = document.documentElement.clientWidth - 8;
+  const fitsR = m.left + xr + w <= vw, fitsL = m.left + xl >= 8;
+  let right = POS[id][0] > 128.5;               // outward first; flip inward only if the viewport is too narrow
+  if (right && !fitsR && fitsL) right = false; else if (!right && !fitsL && fitsR) right = true;
+  const x = Math.min(Math.max(right ? xr : xl, 8 - m.left), vw - m.left - w);
+  tip.classList.toggle('to-right', right); tip.classList.toggle('to-left', !right);
+  tip.style.setProperty('--nudge', (right ? -4 : 4) + 'px');
+  tip.style.left = x + 'px';
+  tip.style.top = (cy - h/2) + 'px';
+  tip.classList.add('show');
+}
+function hideTip() { $('tip').classList.remove('show'); }
+
+function fill(sel, kind) {
+  const conds = [...new Set(data.clips.filter(c => c.kind === kind).map(c => c.condition))];
+  sel.innerHTML = '<option value="">Random</option>' +
+    conds.map(c => `<option>${c}</option>`).join('');
+}
+
+const pick = a => a[Math.floor(Math.random() * a.length)];
+
+// Gender is fixed per patient: chosen explicitly, or rolled once and kept until the case/patient setting changes.
+function rollPatient() { patient = sex || pick(['F', 'M']); }
+
+// Dim sites that have no recording of the selected case (tapping one gives a normal sound).
+function markCoverage() {
+  document.querySelectorAll('.site').forEach(g => {
+    const id = g.dataset.site, kind = KIND(id), want = $(kind === 'heart' ? 'heartCase' : 'lungCase').value;
+    g.classList.toggle('none', !!want && !data.clips.some(c => c.site === id && c.condition === want && (!sex || c.gender === sex)));
+  });
+}
+
+// With a sex selected, only that sex is ever played. With none selected, favour the rolled patient but allow either.
+const prefer = a => { const mine = a.filter(c => c.gender === patient); return pick(mine.length ? mine : a); };
+
+// The one function the real NFC version also calls: site code in, sound out.
+function tap(site) {
+  const kind = KIND(site);
+  const want = $(kind === 'heart' ? 'heartCase' : 'lungCase').value;
+  const pool = data.clips.filter(c => c.kind === kind && c.site === site && (!sex || c.gender === sex));
+  let clip, note = '';
+  if (!want) {
+    // Balanced: every condition recorded at this site is equally likely, regardless of how many clips it has.
+    const conds = [...new Set(pool.map(c => c.condition))];
+    const cond = pick(conds);
+    clip = prefer(pool.filter(c => c.condition === cond));
+  } else {
+    const hit = pool.filter(c => c.condition === want);
+    if (hit.length) clip = prefer(hit);
+    else {
+      const normal = pool.filter(c => c.code === 'N');
+      clip = prefer(normal.length ? normal : pool);
+      note = `No "${want}" recording${sex ? ' for this patient' : ''} at this site in the dataset, so this is a ${normal.length ? 'normal' : 'different'} sound.`;
+    }
+  }
+  play(site, clip, note);
+}
+
+function play(site, clip, note) {
+  audio.src = clip.file;
+  audio.play().then(() => $('unlock').classList.remove('show'))
+              .catch(() => $('unlock').classList.add('show'));   // autoplay blocked (e.g. opened from an NFC tag)
+  current = { site, clip, note, revealed: false };
+  document.querySelectorAll('.site').forEach(g => g.classList.toggle('active', g.dataset.site === site));
+  render();
+}
+
+function render() {
+  const { site, clip, note, revealed } = current;
+  const hide = $('quiz').checked && !revealed;
+  $('now').classList.remove('idle');
+  const male = clip.gender === 'M';
+  $('site').innerHTML = `<svg class="gicon" viewBox="0 0 24 24" role="img" aria-label="${male ? 'Male' : 'Female'} recording">` +
+    (male ? '<circle cx="10" cy="14" r="6"/><path d="M14.5 9.5 21 3M15 3h6v6"/>' : '<circle cx="12" cy="9" r="6"/><path d="M12 15v7M9 19h6"/>') +
+    '</svg>' + data.sites[site] + ' (' + site + ')';
+  $('label').classList.toggle('hidden', hide);
+  $('label').textContent = hide ? 'Sound hidden' : clip.condition;
+  $('note').textContent = hide ? '' : note;
+  $('reveal').hidden = !hide; $('stop').hidden = false;
+}
+
+addEventListener('pagehide', () => audio.pause());
+document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); });
+
+function stop() {
+  audio.pause(); audio.currentTime = 0; audio.removeAttribute('src'); audio.load();
+  document.querySelectorAll('.site').forEach(g => g.classList.remove('active'));
+  $('stop').hidden = true;
+}
+
+// NFC stickers will hold a URL like https://your.host/trainer/#/RUSB.
+function route() {
+  const m = location.hash.match(/^#\/?([A-Za-z]+)$/);
+  if (m && POS[m[1].toUpperCase()]) tap(m[1].toUpperCase());
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,818 @@
+{
+ "sites": {
+  "RUSB": "Right upper sternal border",
+  "LUSB": "Left upper sternal border",
+  "LLSB": "Lower left sternal border",
+  "RC": "Right costal margin",
+  "LC": "Left costal margin",
+  "A": "Apex",
+  "RUA": "Right upper anterior",
+  "LUA": "Left upper anterior",
+  "RMA": "Right mid anterior",
+  "LMA": "Left mid anterior",
+  "RLA": "Right lower anterior",
+  "LLA": "Left lower anterior"
+ },
+ "clips": [
+  {
+   "file": "sounds/F_AF_A.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "AF",
+   "condition": "Atrial fibrillation",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_AF_LUSB.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "AF",
+   "condition": "Atrial fibrillation",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_ESM_LLSB.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_ESM_LUSB.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_ESM_RUSB.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_LDM_A.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "LDM",
+   "condition": "Late diastolic murmur",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_LDM_LLSB.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "LDM",
+   "condition": "Late diastolic murmur",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_LDM_LUSB.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "LDM",
+   "condition": "Late diastolic murmur",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_LSM_A.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "LSM",
+   "condition": "Late systolic murmur",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_LSM_LLSB.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "LSM",
+   "condition": "Late systolic murmur",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_LSM_LUSB.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "LSM",
+   "condition": "Late systolic murmur",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_MSM_A.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_MSM_LLSB.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_MSM_LUSB.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_N_A.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_N_LC.wav",
+   "kind": "heart",
+   "site": "LC",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_N_LLSB.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_N_LUSB.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_N_RC.wav",
+   "kind": "heart",
+   "site": "RC",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_N_RUSB.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_S3_A.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "S3",
+   "condition": "Third heart sound (S3)",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_S3_LC.wav",
+   "kind": "heart",
+   "site": "LC",
+   "code": "S3",
+   "condition": "Third heart sound (S3)",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_S3_LLSB.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "S3",
+   "condition": "Third heart sound (S3)",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_S4_RC.wav",
+   "kind": "heart",
+   "site": "RC",
+   "code": "S4",
+   "condition": "Fourth heart sound (S4)",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_T_A.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "T",
+   "condition": "Tachycardia",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_T_RC.wav",
+   "kind": "heart",
+   "site": "RC",
+   "code": "T",
+   "condition": "Tachycardia",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/M_AF_LC.wav",
+   "kind": "heart",
+   "site": "LC",
+   "code": "AF",
+   "condition": "Atrial fibrillation",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_AF_RUSB.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "AF",
+   "condition": "Atrial fibrillation",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_AVB_A.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "AVB",
+   "condition": "AV block",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_AVB_LLSB.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "AVB",
+   "condition": "AV block",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_AVB_RC.wav",
+   "kind": "heart",
+   "site": "RC",
+   "code": "AVB",
+   "condition": "AV block",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_ESM_A.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_ESM_LUSB.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_ESM_RUSB.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_LDM_LC.wav",
+   "kind": "heart",
+   "site": "LC",
+   "code": "LDM",
+   "condition": "Late diastolic murmur",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_LDM_LLSB.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "LDM",
+   "condition": "Late diastolic murmur",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_LDM_LUSB.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "LDM",
+   "condition": "Late diastolic murmur",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_LSM_LUSB.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "LSM",
+   "condition": "Late systolic murmur",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_LSM_RUSB.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "LSM",
+   "condition": "Late systolic murmur",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_MSM_A.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_MSM_LUSB.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_MSM_RC.wav",
+   "kind": "heart",
+   "site": "RC",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_MSM_RUSB.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_N_LC.wav",
+   "kind": "heart",
+   "site": "LC",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_N_LLSB.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_N_RUSB.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_S3_LLSB.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "S3",
+   "condition": "Third heart sound (S3)",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_S3_LUSB.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "S3",
+   "condition": "Third heart sound (S3)",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_S4_LUSB.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "S4",
+   "condition": "Fourth heart sound (S4)",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_T_LUSB.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "T",
+   "condition": "Tachycardia",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/F_CC_LLA.wav",
+   "kind": "lung",
+   "site": "LLA",
+   "code": "CC",
+   "condition": "Coarse crackles",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_CC_LMA.wav",
+   "kind": "lung",
+   "site": "LMA",
+   "code": "CC",
+   "condition": "Coarse crackles",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_CC_LUA.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "CC",
+   "condition": "Coarse crackles",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_CC_RLA.wav",
+   "kind": "lung",
+   "site": "RLA",
+   "code": "CC",
+   "condition": "Coarse crackles",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_CC_RMA.wav",
+   "kind": "lung",
+   "site": "RMA",
+   "code": "CC",
+   "condition": "Coarse crackles",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_FC_LUA.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "FC",
+   "condition": "Fine crackles",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_FC_RLA.wav",
+   "kind": "lung",
+   "site": "RLA",
+   "code": "FC",
+   "condition": "Fine crackles",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_N_LLA.wav",
+   "kind": "lung",
+   "site": "LLA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_N_LMA.wav",
+   "kind": "lung",
+   "site": "LMA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_N_LUA.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_N_RLA.wav",
+   "kind": "lung",
+   "site": "RLA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_N_RMA.wav",
+   "kind": "lung",
+   "site": "RMA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_N_RUA.wav",
+   "kind": "lung",
+   "site": "RUA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_PR_LLA.wav",
+   "kind": "lung",
+   "site": "LLA",
+   "code": "PR",
+   "condition": "Pleural rub",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_PR_LMA.wav",
+   "kind": "lung",
+   "site": "LMA",
+   "code": "PR",
+   "condition": "Pleural rub",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_PR_LUA.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "PR",
+   "condition": "Pleural rub",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_R_LMA.wav",
+   "kind": "lung",
+   "site": "LMA",
+   "code": "R",
+   "condition": "Rhonchi",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_R_LUA.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "R",
+   "condition": "Rhonchi",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_R_RLA.wav",
+   "kind": "lung",
+   "site": "RLA",
+   "code": "R",
+   "condition": "Rhonchi",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/F_W_RUA.wav",
+   "kind": "lung",
+   "site": "RUA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "F"
+  },
+  {
+   "file": "sounds/M_CC_LLA.wav",
+   "kind": "lung",
+   "site": "LLA",
+   "code": "CC",
+   "condition": "Coarse crackles",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_CC_LMA.wav",
+   "kind": "lung",
+   "site": "LMA",
+   "code": "CC",
+   "condition": "Coarse crackles",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_CC_LUA.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "CC",
+   "condition": "Coarse crackles",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_CC_RLA.wav",
+   "kind": "lung",
+   "site": "RLA",
+   "code": "CC",
+   "condition": "Coarse crackles",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_FC_LUA.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "FC",
+   "condition": "Fine crackles",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_FC_RLA.wav",
+   "kind": "lung",
+   "site": "RLA",
+   "code": "FC",
+   "condition": "Fine crackles",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_FC_RUA.wav",
+   "kind": "lung",
+   "site": "RUA",
+   "code": "FC",
+   "condition": "Fine crackles",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_N_LLA.wav",
+   "kind": "lung",
+   "site": "LLA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_N_LMA.wav",
+   "kind": "lung",
+   "site": "LMA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_N_LUA.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_N_RLA.wav",
+   "kind": "lung",
+   "site": "RLA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_N_RMA.wav",
+   "kind": "lung",
+   "site": "RMA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_N_RUA.wav",
+   "kind": "lung",
+   "site": "RUA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_PR_LLA.wav",
+   "kind": "lung",
+   "site": "LLA",
+   "code": "PR",
+   "condition": "Pleural rub",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_PR_LMA.wav",
+   "kind": "lung",
+   "site": "LMA",
+   "code": "PR",
+   "condition": "Pleural rub",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_PR_LUA.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "PR",
+   "condition": "Pleural rub",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_PR_RLA.wav",
+   "kind": "lung",
+   "site": "RLA",
+   "code": "PR",
+   "condition": "Pleural rub",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_PR_RMA.wav",
+   "kind": "lung",
+   "site": "RMA",
+   "code": "PR",
+   "condition": "Pleural rub",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_PR_RUA.wav",
+   "kind": "lung",
+   "site": "RUA",
+   "code": "PR",
+   "condition": "Pleural rub",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_R_LLA.wav",
+   "kind": "lung",
+   "site": "LLA",
+   "code": "R",
+   "condition": "Rhonchi",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_R_LMA.wav",
+   "kind": "lung",
+   "site": "LMA",
+   "code": "R",
+   "condition": "Rhonchi",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_R_LUA.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "R",
+   "condition": "Rhonchi",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_R_RLA.wav",
+   "kind": "lung",
+   "site": "RLA",
+   "code": "R",
+   "condition": "Rhonchi",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_R_RUA.wav",
+   "kind": "lung",
+   "site": "RUA",
+   "code": "R",
+   "condition": "Rhonchi",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_W_LLA.wav",
+   "kind": "lung",
+   "site": "LLA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_W_LMA.wav",
+   "kind": "lung",
+   "site": "LMA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_W_LUA.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_W_RLA.wav",
+   "kind": "lung",
+   "site": "RLA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_W_RMA.wav",
+   "kind": "lung",
+   "site": "RMA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "M"
+  },
+  {
+   "file": "sounds/M_W_RUA.wav",
+   "kind": "lung",
+   "site": "RUA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "M"
+  }
+ ]
+}
