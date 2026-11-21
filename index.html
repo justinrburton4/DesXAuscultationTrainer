@@ -197,7 +197,12 @@ const R = 5.9;   // marker radius
 const KIND = s => (['RUA','LUA','RMA','LMA','RLA','LLA'].includes(s) ? 'lung' : 'heart');
 
 const $ = id => document.getElementById(id);
-const audio = new Audio(); audio.loop = true;
+// Web Audio (not <audio>): mobile browsers resample odd rates like these 4 kHz clips, and we can add gain.
+let actx, gainNode, srcNode, playToken = 0; const bufCache = {};
+function loadBuf(url) {
+  return bufCache[url] || (bufCache[url] = fetch(url).then(r => r.arrayBuffer())
+    .then(ab => new Promise((ok, no) => actx.decodeAudioData(ab, ok, no))));
+}
 let data, current = null, patient = null, sex = '';   // patient: gender locked across taps so one case = one person
 
 fetch('sounds.json').then(r => r.json()).then(d => { data = d; init(); });
@@ -296,9 +301,21 @@ function tap(site) {
 }
 
 function play(site, clip, note) {
-  audio.src = clip.file;
-  audio.play().then(() => $('unlock').classList.remove('show'))
-              .catch(() => $('unlock').classList.add('show'));   // autoplay blocked (e.g. opened from an NFC tag)
+  stopSource();
+  const token = ++playToken;
+  try {
+    if (!actx) {
+      actx = new (window.AudioContext || window.webkitAudioContext)();
+      gainNode = actx.createGain(); gainNode.gain.value = 1; gainNode.connect(actx.destination);
+    }
+    actx.resume();
+    loadBuf(clip.file).then(buf => {
+      if (token !== playToken) return;
+      srcNode = actx.createBufferSource(); srcNode.buffer = buf; srcNode.loop = true;
+      srcNode.connect(gainNode); srcNode.start();
+      $('unlock').classList.toggle('show', actx.state !== 'running');   // blocked until a tap (e.g. opened from an NFC tag)
+    }).catch(() => $('unlock').classList.add('show'));
+  } catch (e) { $('unlock').classList.add('show'); }
   current = { site, clip, note, revealed: false };
   document.querySelectorAll('.site').forEach(g => g.classList.toggle('active', g.dataset.site === site));
   render();
@@ -318,11 +335,13 @@ function render() {
   $('reveal').hidden = !hide; $('stop').hidden = false;
 }
 
-addEventListener('pagehide', () => audio.pause());
+addEventListener('pagehide', () => stopSource());
 document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); });
 
+function stopSource() { if (srcNode) { try { srcNode.stop(); } catch (e) {} srcNode.disconnect(); srcNode = null; } }
+
 function stop() {
-  audio.pause(); audio.currentTime = 0; audio.removeAttribute('src'); audio.load();
+  playToken++; stopSource();
   document.querySelectorAll('.site').forEach(g => g.classList.remove('active'));
   $('stop').hidden = true;
 }
