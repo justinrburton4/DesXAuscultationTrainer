@@ -813,6 +813,1014 @@
    "code": "W",
    "condition": "Wheezing",
    "gender": "M"
+  },
+  {
+   "file": "sounds/X_F_ESM_A_1.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_ESM_A_2.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_ESM_A_1.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_ESM_A_2.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_ESM_LLSB_1.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_ESM_LLSB_2.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_ESM_LLSB_1.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_ESM_LLSB_2.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_ESM_LUSB_1.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_ESM_LUSB_2.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_ESM_LUSB_1.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_ESM_LUSB_2.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_ESM_RUSB_1.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_ESM_RUSB_2.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_ESM_RUSB_1.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_ESM_RUSB_2.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "ESM",
+   "condition": "Early systolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_HSM_A_1.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "HSM",
+   "condition": "Holosystolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_HSM_A_2.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "HSM",
+   "condition": "Holosystolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_HSM_A_1.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "HSM",
+   "condition": "Holosystolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_HSM_A_2.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "HSM",
+   "condition": "Holosystolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_HSM_LLSB_1.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "HSM",
+   "condition": "Holosystolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_HSM_LLSB_2.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "HSM",
+   "condition": "Holosystolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_HSM_LLSB_1.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "HSM",
+   "condition": "Holosystolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_HSM_LLSB_2.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "HSM",
+   "condition": "Holosystolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_HSM_LUSB_1.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "HSM",
+   "condition": "Holosystolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_HSM_LUSB_2.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "HSM",
+   "condition": "Holosystolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_HSM_LUSB_1.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "HSM",
+   "condition": "Holosystolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_HSM_LUSB_2.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "HSM",
+   "condition": "Holosystolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_HSM_RUSB_1.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "HSM",
+   "condition": "Holosystolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_HSM_RUSB_2.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "HSM",
+   "condition": "Holosystolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_HSM_RUSB_1.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "HSM",
+   "condition": "Holosystolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_HSM_RUSB_2.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "HSM",
+   "condition": "Holosystolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_MSM_A_1.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_MSM_A_2.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_MSM_A_1.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_MSM_A_2.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_MSM_LLSB_1.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_MSM_LLSB_2.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_MSM_LLSB_1.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_MSM_LLSB_2.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_MSM_LUSB_1.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_MSM_LUSB_2.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_MSM_LUSB_1.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_MSM_LUSB_2.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_MSM_RUSB_1.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_MSM_RUSB_2.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_MSM_RUSB_1.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_MSM_RUSB_2.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "MSM",
+   "condition": "Mid systolic murmur",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_N_A_1.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_N_A_2.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_N_A_1.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_N_A_2.wav",
+   "kind": "heart",
+   "site": "A",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_N_LLSB_1.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_N_LLSB_2.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_N_LLSB_1.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_N_LLSB_2.wav",
+   "kind": "heart",
+   "site": "LLSB",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_N_LUSB_1.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_N_LUSB_2.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_N_LUSB_1.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_N_LUSB_2.wav",
+   "kind": "heart",
+   "site": "LUSB",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_N_RUSB_1.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_F_N_RUSB_2.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "F",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_N_RUSB_1.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_M_N_RUSB_2.wav",
+   "kind": "heart",
+   "site": "RUSB",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "M",
+   "src": "circor"
+  },
+  {
+   "file": "sounds/X_C_LUA_1.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "C",
+   "condition": "Crackles",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_C_LMA_2.wav",
+   "kind": "lung",
+   "site": "LMA",
+   "code": "C",
+   "condition": "Crackles",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_C_LLA_3.wav",
+   "kind": "lung",
+   "site": "LLA",
+   "code": "C",
+   "condition": "Crackles",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_C_LUA_4.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "C",
+   "condition": "Crackles",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_C_LMA_5.wav",
+   "kind": "lung",
+   "site": "LMA",
+   "code": "C",
+   "condition": "Crackles",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_C_LLA_6.wav",
+   "kind": "lung",
+   "site": "LLA",
+   "code": "C",
+   "condition": "Crackles",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_C_RUA_1.wav",
+   "kind": "lung",
+   "site": "RUA",
+   "code": "C",
+   "condition": "Crackles",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_C_RMA_2.wav",
+   "kind": "lung",
+   "site": "RMA",
+   "code": "C",
+   "condition": "Crackles",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_C_RLA_3.wav",
+   "kind": "lung",
+   "site": "RLA",
+   "code": "C",
+   "condition": "Crackles",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_C_RUA_4.wav",
+   "kind": "lung",
+   "site": "RUA",
+   "code": "C",
+   "condition": "Crackles",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_C_RMA_5.wav",
+   "kind": "lung",
+   "site": "RMA",
+   "code": "C",
+   "condition": "Crackles",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_C_RLA_6.wav",
+   "kind": "lung",
+   "site": "RLA",
+   "code": "C",
+   "condition": "Crackles",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_CW_LUA_1.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "CW",
+   "condition": "Crackles and wheezes",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_CW_LMA_2.wav",
+   "kind": "lung",
+   "site": "LMA",
+   "code": "CW",
+   "condition": "Crackles and wheezes",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_CW_LLA_3.wav",
+   "kind": "lung",
+   "site": "LLA",
+   "code": "CW",
+   "condition": "Crackles and wheezes",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_CW_LUA_4.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "CW",
+   "condition": "Crackles and wheezes",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_CW_LMA_5.wav",
+   "kind": "lung",
+   "site": "LMA",
+   "code": "CW",
+   "condition": "Crackles and wheezes",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_CW_LLA_6.wav",
+   "kind": "lung",
+   "site": "LLA",
+   "code": "CW",
+   "condition": "Crackles and wheezes",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_CW_RUA_1.wav",
+   "kind": "lung",
+   "site": "RUA",
+   "code": "CW",
+   "condition": "Crackles and wheezes",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_CW_RMA_2.wav",
+   "kind": "lung",
+   "site": "RMA",
+   "code": "CW",
+   "condition": "Crackles and wheezes",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_CW_RLA_3.wav",
+   "kind": "lung",
+   "site": "RLA",
+   "code": "CW",
+   "condition": "Crackles and wheezes",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_CW_RUA_4.wav",
+   "kind": "lung",
+   "site": "RUA",
+   "code": "CW",
+   "condition": "Crackles and wheezes",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_CW_RMA_5.wav",
+   "kind": "lung",
+   "site": "RMA",
+   "code": "CW",
+   "condition": "Crackles and wheezes",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_CW_RLA_6.wav",
+   "kind": "lung",
+   "site": "RLA",
+   "code": "CW",
+   "condition": "Crackles and wheezes",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_N_LUA_1.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_N_LMA_2.wav",
+   "kind": "lung",
+   "site": "LMA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_N_LLA_3.wav",
+   "kind": "lung",
+   "site": "LLA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_N_LUA_4.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_N_LMA_5.wav",
+   "kind": "lung",
+   "site": "LMA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_N_LLA_6.wav",
+   "kind": "lung",
+   "site": "LLA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_N_RUA_1.wav",
+   "kind": "lung",
+   "site": "RUA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_N_RMA_2.wav",
+   "kind": "lung",
+   "site": "RMA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_N_RLA_3.wav",
+   "kind": "lung",
+   "site": "RLA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_N_RUA_4.wav",
+   "kind": "lung",
+   "site": "RUA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_N_RMA_5.wav",
+   "kind": "lung",
+   "site": "RMA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_N_RLA_6.wav",
+   "kind": "lung",
+   "site": "RLA",
+   "code": "N",
+   "condition": "Normal",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_W_LUA_1.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_W_LMA_2.wav",
+   "kind": "lung",
+   "site": "LMA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_W_LLA_3.wav",
+   "kind": "lung",
+   "site": "LLA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_W_LUA_4.wav",
+   "kind": "lung",
+   "site": "LUA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_W_LMA_5.wav",
+   "kind": "lung",
+   "site": "LMA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_W_LLA_6.wav",
+   "kind": "lung",
+   "site": "LLA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_W_RUA_1.wav",
+   "kind": "lung",
+   "site": "RUA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_W_RMA_2.wav",
+   "kind": "lung",
+   "site": "RMA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_W_RLA_3.wav",
+   "kind": "lung",
+   "site": "RLA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_W_RUA_4.wav",
+   "kind": "lung",
+   "site": "RUA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_W_RMA_5.wav",
+   "kind": "lung",
+   "site": "RMA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "",
+   "src": "icbhi"
+  },
+  {
+   "file": "sounds/X_W_RLA_6.wav",
+   "kind": "lung",
+   "site": "RLA",
+   "code": "W",
+   "condition": "Wheezing",
+   "gender": "",
+   "src": "icbhi"
   }
  ]
 }
